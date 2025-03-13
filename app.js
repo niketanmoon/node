@@ -1,8 +1,10 @@
+// import { calculateMuliplication, calculateSum } from "./calculate/index.js";
+
+const { calculateMuliplication, calculateSum } = require("./calculate");
+
 var name = "Namaste NodeJS";
 var a = 10;
 var b = 20;
 console.log(name);
-console.log(a + b);
-console.log(global);
-console.log(globalThis);
-console.log(globalThis === global);
+calculateSum(a, b);
+calculateMuliplication(a, b);
