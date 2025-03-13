@@ -34,3 +34,46 @@
 - Asynchronous
 - We have to specify .js extension to module
 - For index.js as well
+
+## Diving deep into module.exports and require
+
+- When you do `require` it will put all the code inside a function
+  i.e. it will wrap the code in function to make it private
+- That's why variables and functions are private
+- All the code is wrapped inside a function (IIFE)
+- IIFE - Immediately Invoked Function Expression
+- You can do this by `(function(){})()`
+- Node caches the `require`
+- require steps
+  - Resolving the module
+  - Loading the module
+  - Compile - Wraps inside IIFE
+  - Evaluation of the module - module.exports
+  - Caching -- most important
+
+## Libuv and async IO
+
+- Manages all the tasks and connects to OS
+- File, timer, db, internet
+- Libuv is a C program which makes async io simple
+- sync code
+- async code
+- blocking main thread
+- setTimeout(cbfn, 0)
+
+## V8 JS Engine
+
+- Parsing
+  - Lexical analysis (Tokenization)
+  - Syntax Analysis (AST)
+- Ignition Interpreter
+- Byte Code
+- Execution
+
+Parallel to Ignition Interpreter there is
+
+- Turbofan Compiler
+- Optimised Machine Code
+- Execution
+
+- The above step also deoptimizes and passed on to ignition interpreter if the type changes
