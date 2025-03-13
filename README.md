@@ -77,3 +77,22 @@ Parallel to Ignition Interpreter there is
 - Execution
 
 - The above step also deoptimizes and passed on to ignition interpreter if the type changes
+
+## Create a Server
+
+- use `http.createServer`
+- Using http to create server will be complex
+- So we use `express` as a wrapper to create server
+
+## Database: SQL and NoSQL
+
+- SQL: MySQL, PostgreSQL
+- NoSQL: DocumentDb, Key Value DB, GraphDB, wide column DB, multimodel DB
+- MongoDB is a type of Document DB
+- In mongodb
+  - No need for joins
+  - No need for Data normalization
+- IN SQL there is `table`, In MongoDB it is called as Collection
+- IN table there is rows and columns
+- In NOSQL there is document and fields
+- Added npm package mongodb to connect mongodb compass
